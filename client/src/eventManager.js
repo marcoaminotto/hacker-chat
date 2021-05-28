@@ -31,6 +31,10 @@ export default class EventManager {
     this.#updateUsersComponent();
   }
 
+  message(message) {
+    this.componentEmitter.emit(constants.events.app.MESSAGE_RECEIVED, message);
+  }
+
   newUserConnected(message) {
     const user = message;
     this.#allUsers.set(user.id, user.userName);
