@@ -61,11 +61,7 @@ export default class TerminalController {
 
   #registerEvents(eventEmitter, components) {
     eventEmitter.on(
-      constants.events.app.MESSAGE_RECEIVERD,
-      this.#onMessageReceived(components)
-    );
-    eventEmitter.on(
-      constants.events.app.MESSAGE_SENT,
+      constants.events.app.MESSAGE_RECEIVED,
       this.#onMessageReceived(components)
     );
     eventEmitter.on(
